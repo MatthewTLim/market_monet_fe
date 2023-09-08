@@ -1,0 +1,8 @@
+<h2>All Markets</h2>
+<% @markets.each do |market| %>
+  <p>Name: <li><%= market.name %></li></p>
+  <p>State: <li><%= market.state %></li></p>
+  <P>City: <li> <%= market.city %></li></p>
+  <p><%= link_to "Get more info on #{market.name}", market_path(market.id) %></p>
+  <br>
+<% end %>
